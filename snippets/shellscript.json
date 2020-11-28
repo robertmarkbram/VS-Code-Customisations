@@ -1,0 +1,49 @@
+{
+	// Place your snippets for shellscript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"If_block": {
+		"prefix": "if",
+		"body": [
+		   "if [ ${1:condition} ] ; then",
+		   "   ${2:body}",
+		  	"fi"
+		],
+		"description": "if"
+	},	
+	"If_help_block": {
+		"prefix": "if",
+		"body": [
+			"if [ \"\\${1}\" == \"-h\" -o \"\\${1}\" == \"-H\" ] ; then",
+			"   echo \"Usage: \\${baseCommandName}\"",
+			"   echo \"- Script description.\"",
+			"   echo \"   -h   Display this help message and exit.\"",
+			"   exit 0",
+			"fi"
+		],
+		"description": "if to check for help"
+	},	
+	"Command_Name": {
+		"prefix": "commandName",
+		"body": [
+			"# Shortcut for the name of this file - for docs.",
+			"commandName=\\$(basename \\${BASH_SOURCE[0]})",
+			"# Base command name (name of this script without .sh extension) is useful for",
+			"# things like property files with the same base name of the script,",
+			"# e.g. foo.sh and foo.properties.",
+			"baseCommandName=\\$(echo \\${commandName} | sed -e 's/\\.sh//g')"
+		],
+		"description": "command name for usage statements"
+	},
+  }	
+}
