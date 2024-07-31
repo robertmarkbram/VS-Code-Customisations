@@ -37,9 +37,9 @@
 	, "new section heading with link": {
 		"prefix": "iheading",
 		"body": [
-			"$1# ${CLIPBOARD}",
+			"$1## ${CLIPBOARD}",
 			"",
-			"This section: [${2:${CLIPBOARD}}](${TM_FILENAME}#${CLIPBOARD/(([\\w-]*)([^\\w\\s]*)*(\\s)*)/${2:/downcase}${4:+-}/g})"
+			"This section: [${2:${CLIPBOARD}}](${TM_FILENAME}#${CLIPBOARD/(([\\w-]*)([^\\w\\s]*)*(\\s)*)/${2:/downcase}${4:+-}/g}) | [Back to top](#top)"
 		],
 		"description": "Insert heading and link to section whose heading text is in the clipboard"
 	}
@@ -64,7 +64,7 @@
 	, "new section heading with link - from selected text": {
 		"prefix": "iheading from selected text",
 		"body": [
-			"$1# ${TM_SELECTED_TEXT}",
+			"$1## ${TM_SELECTED_TEXT}",
 			"",
 			"This section: [${2:${TM_SELECTED_TEXT}}](${TM_FILENAME}#${TM_SELECTED_TEXT/(([\\w-]*)([^\\w\\s]*)*(\\s)*)/${2:/downcase}${4:+-}/g})"
 		],
